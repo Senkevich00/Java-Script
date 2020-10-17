@@ -19,8 +19,8 @@ const data = [
 
 const surname = prompt("Введите вашу фамилию");
 
-const f = data.find(el => el.lastName === surname);
-if (f) {
+const currentUser = data.find(el => el.lastName === surname);
+if (currentUser) {
     alert(f.firstName)
 }
 else {
