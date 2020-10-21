@@ -1,32 +1,38 @@
-const data = [
-    {
-        firstName: "Andrey",
-        lastName: "Buzin",
-        age: 20,
-    },
-    {
-        firstName: "Viktor",
-        lastName: "Kit",
-        age: 18,
-    },
-    {
-        firstName: "Sasha",
-        lastName: "Gray",
-        age: 24,
+// задание 1
+function isPalindrome(str) {
+    var strLen = str.length,
+        strReverse = str.split('').reverse().join('');
+    if (strReverse == str) {
+        return 'yes';
+    } else {
+        return 'no';
     }
-
-]
-
-const surname = prompt("Введите вашу фамилию");
-
-const currentUser = data.find(el => el.lastName === surname);
-if (currentUser) {
-    alert(f.firstName)
-}
-else {
-    alert("No results found for you request")
 }
 
+test = isPalindrome('человек');
+test2 = isPalindrome('шалаш');
+
+console.log(test);
+console.log(test2);
+
+// задание 2
+const array = [2, 1, 9, 4, 6, 5, 3, 7, 8, 10]
+console.log("array", array)
+
+bubbleSort(array)
+
+
+function bubbleSort(array) {
+    for (let i = 0; i < array.length - 1; i++) {
+        if (array[i] > array[i + 1]) {
+            const buff = array[i]
+            array[i] = array[i + 1]
+            array[i + 1] = buff
+        }
+
+    }
+    console.log("array", array)
+}
 
 
 
