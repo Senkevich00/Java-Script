@@ -1,19 +1,23 @@
-const username = localStorage.getItem('username');
 
-if (username === null || username.length === 0) {
-    document.querySelector('#username').classList.remove('hidden');
-    document.querySelector('#username').addEventListener('input', function () {
-        localStorage.setItem('username', this.value.trim());
-    });
-} else {
-    document.querySelector('.greet').textContent = `Привет, ${username}!`;
+function randomInteger(min, max) {
+    let time = min + Math.random() * (max + 1 - min);
+    return Math.floor(time);
 }
 
+function f(name, time) {
+    const flag = true
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            if (flag) {
+                alert(`Cкакун по кличке ${name} финишировал за ${time} cекунд`);
+            }
 
 
+        }, 2000);
+
+    });
 
 
-
-
+}
 
 
